@@ -54,7 +54,7 @@ class MoIPClient {
 	 * @param string $error errors
 	 * @return MoipResponse
      */
-    function curlPost($credentials, $xml, $url, $error=null) {
+    public function curlPost($credentials, $xml, $url, $error=null) {
 
         if (!$error) {
             $header[] = "Expect:";
@@ -97,7 +97,7 @@ class MoIPClient {
      * @param string $error errors
      * @return MoipResponse
      */
-    function curlGet($credentials, $url, $error=null) {
+    public function curlGet($credentials, $url, $error=null) {
 
         if (!$error) {
             $header[] = "Expect:";
@@ -130,30 +130,4 @@ class MoIPClient {
         }
     }
 
-}
-
-/**
- * Read-only response
- * @property boolean|string $response
- * @property string $error
- * @property string $xml
- * @property string $payment_url
- * @property string $token
- */
-class MoipResponse {
-	private $response;
-
-	function __construct(array $response)
-	{
-		$this->response = $response;
-	}
-
-	function __get($name)
-	{
-		if (isset($this->response[$name]))
-		{
-			return $this->response[$name];
-		}
-		return null;
-	}
 }
