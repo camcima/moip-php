@@ -1,4 +1,6 @@
 <?php
+	
+namespace Moip;
 
 /**
  * Library to help PHP users of Moip's API
