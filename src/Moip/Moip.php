@@ -195,7 +195,7 @@ class Moip {
      * @access private
      */
     private function initXMLObject() {
-        $this->xml = new SimpleXmlElement('<?xml version="1.0" encoding="utf-8" ?><EnviarInstrucao></EnviarInstrucao>');
+        $this->xml = new \SimpleXmlElement('<?xml version="1.0" encoding="utf-8" ?><EnviarInstrucao></EnviarInstrucao>');
         $this->xml->addChild('InstrucaoUnica');
     }
 
@@ -783,7 +783,7 @@ class Moip {
         $answer = $client->curlGet($credential, $url, $this->errors);
 
         if ($answer->response) {
-            $xml = new SimpleXmlElement($answer->xml);
+            $xml = new \SimpleXmlElement($answer->xml);
 
             if ($xml->Resposta->Status == "Sucesso")
                 $response = true;
