@@ -746,7 +746,7 @@ class Moip {
                 return $this->answer->xml;
             }
 
-            $xml = new SimpleXmlElement($this->answer->xml);
+            $xml = new \SimpleXmlElement($this->answer->xml);
 
             return new MoipResponse(array(
 				'response' => $xml->Resposta->Status == 'Sucesso' ? true : false,
