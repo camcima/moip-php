@@ -1,7 +1,5 @@
 <?php
 
-include_once "autoload.inc.php";
-
 function exampleBasicInstructions() {
     $moip = new Moip();
     $moip->setEnvironment('test');
