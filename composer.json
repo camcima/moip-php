@@ -1,0 +1,23 @@
+{
+    "name": "camcima/moip-php",
+    "type": "library",
+    "description": "Moip Gateway Integration for PHP",
+    "keywords": ["moip", "gateway", "credit", "debit", "payment", "api", "transaction"],
+    "homepage": "https://github.com/camcima/moip-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Cima",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Moip": "src/"
+        }
+    }
+}
